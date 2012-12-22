@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web.Mvc;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using sca_op_mvc;
 using sca_op_mvc.Controllers;
@@ -22,7 +23,8 @@ namespace sca_op_mvc.Tests.Controllers
             ViewResult result = controller.Index() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Modify this template to jump-start your ASP.NET MVC application.", result.ViewBag.Message);
+            result.Should().NotBeNull("The controller exists");
+
         }
 
         [TestMethod]

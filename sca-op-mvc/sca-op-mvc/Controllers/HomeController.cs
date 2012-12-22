@@ -10,7 +10,7 @@ namespace sca_op_mvc.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            
 
             return View();
         }
@@ -24,7 +24,7 @@ namespace sca_op_mvc.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            
 
             return View();
         }
